@@ -1,0 +1,71 @@
+:root {
+  --bg: #000;
+  --panel: #111;
+  --red: #b30000;
+  --text: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: monospace;
+}
+
+.hidden {
+  display: none;
+}
+
+.screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+}
+
+.panel {
+  border: 1px solid var(--red);
+  background: var(--panel);
+  padding: 14px;
+  width: 90%;
+  max-width: 420px;
+  margin-bottom: 12px;
+}
+
+#os {
+  padding: 12px;
+}
+
+h1, h2 {
+  color: var(--red);
+  margin-top: 0;
+}
+
+input, textarea, select {
+  width: 100%;
+  background: black;
+  color: var(--text);
+  border: 1px solid var(--red);
+  padding: 6px;
+  margin-bottom: 6px;
+}
+
+button {
+  background: black;
+  color: var(--red);
+  border: 1px solid var(--red);
+  padding: 6px 10px;
+}
+
+.log {
+  font-size: 12px;
+  opacity: 0.85;
+  margin-top: 6px;
+  white-space: pre-wrap;
+}
