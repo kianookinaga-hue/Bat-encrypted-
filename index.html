@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BATCOMPUTER</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login" class="screen">
+  <div class="panel">
+    <h1>SECURE ACCESS</h1>
+    <input id="password" type="password" placeholder="Enter passphrase">
+    <button id="unlockBtn">UNLOCK</button>
+    <p id="loginStatus"></p>
+  </div>
+</div>
+
+<!-- BOOT -->
+<div id="boot" class="screen hidden">
+  <div id="bootText"></div>
+</div>
+
+<!-- OS -->
+<div id="os" class="hidden">
+
+  <div class="panel">
+    <h2>SYSTEM STATUS</h2>
+    MODE: SOLO OPERATOR<br>
+    TACTICAL TYPE: INVESTIGATIVE / COGNITIVE<br>
+    LOCATION: HONOLULU – SECTOR 3<br>
+    ENCRYPTION: ACTIVE
+  </div>
+
+  <div class="panel">
+    <h2>ACTIVE CASE</h2>
+    <input id="caseName" placeholder="Case name">
+    <button onclick="setCase()">SET CASE</button>
+    <div id="activeCase"></div>
+  </div>
+
+  <div class="panel">
+    <h2>LOG ENTRY</h2>
+    <select id="entryType">
+      <option value="observation">Observation</option>
+      <option value="emotion">Internal State</option>
+      <option value="review">After-Action Review</option>
+    </select>
+    <input id="tags" placeholder="Tags (comma separated)">
+    <textarea id="entryText" rows="3"></textarea>
+    <button onclick="saveEntry()">SAVE ENTRY</button>
+  </div>
+
+  <div class="panel">
+    <h2>DISCIPLINE</h2>
+    <input id="disciplineInput" placeholder="Discipline upheld">
+    <button onclick="saveDiscipline()">LOG</button>
+    <div id="disciplineLog"></div>
+  </div>
+
+  <div class="panel">
+    <h2>TIMELINE</h2>
+    <div id="timeline"></div>
+  </div>
+
+</div>
+
+<script src="batcomputer.js"></script>
+</body>
+</html>
